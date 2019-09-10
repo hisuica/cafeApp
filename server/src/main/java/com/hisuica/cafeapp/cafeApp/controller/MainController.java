@@ -2,10 +2,10 @@ package com.hisuica.cafeapp.cafeApp.controller;
 
 import com.hisuica.cafeapp.cafeApp.model.Notice;
 import com.hisuica.cafeapp.cafeApp.repository.NoticeRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -15,19 +15,9 @@ public class MainController {
 
     public MainController(NoticeRepository repository) { this.repository = repository; }
 
-    @GetMapping("/")
+    @GetMapping("/notice")
+    @CrossOrigin(origins = "http://localhost:4200")
     public Collection<Notice> notices() {
-
-        Notice notice = Notice.builder()
-                .title("testTitle")
-                .context("testContext")
-                .type("Event")
-                .insertDate(LocalDateTime.now())
-                .updateDate(LocalDateTime.now())
-                .build();
-
-        repository.save(notice);
-
         return repository.findAll().stream()
                         .filter(this::isValid)
                         .collect(Collectors.toList());
