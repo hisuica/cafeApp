@@ -1,7 +1,8 @@
 package com.hisuica.cafeapp.cafeApp.controller;
 
 import com.hisuica.cafeapp.cafeApp.model.Notice;
-import com.hisuica.cafeapp.cafeApp.repository.MainRepository;
+import com.hisuica.cafeapp.cafeApp.repository.NoticeRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,11 +11,12 @@ import java.util.stream.Collectors;
 
 @RestController
 public class MainController {
-    private MainRepository repository;
+    private NoticeRepository repository;
 
-    public MainController(MainRepository repository) { this.repository = repository; }
+    public MainController(NoticeRepository repository) { this.repository = repository; }
 
-    @GetMapping("/")
+    @GetMapping("/notice")
+    @CrossOrigin(origins = "http://localhost:4200")
     public Collection<Notice> notices() {
         return repository.findAll().stream()
                         .filter(this::isValid)
