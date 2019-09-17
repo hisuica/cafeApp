@@ -1,3 +1,97 @@
-<h2>Cafe App</h2>
-
-<router-outlet></router-outlet>
+<div id="wrap">
+  <div id="top" class="header">
+    <div id="header1" class="clear-both">
+      <div class="header-login-inner">
+        <ul class="customer-menu">
+          <li>
+            <a routerLink="#" style="padding-right: 15px">
+              お問い合わせ
+            </a>
+          </li>
+          <li>
+            <a routerLink="#" style="margin-right: 30px">
+              ニュース
+            </a>
+          </li>
+        </ul>
+        <ul class="social-links">
+          <li>
+            <a href="#">
+              <img src="assets/icons/facebook.png"  alt="facebook">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/icons/twitter.png" alt="twitter">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/icons/instagram.png" alt="instagram">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/icons/line.png" alt="line">
+            </a>
+          </li>
+        </ul>
+        <ul class="members-menu">
+          <li>
+            <a href="#">
+              ログイン
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              会員登録
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              マイページ
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              管理者画面
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img [src]="searchIcon" alt="search" width="32px">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="header2" class="clear-both">
+      <div class="inner">
+        <div class="top_logo">
+          <a routerLink="/">
+            <img src="assets/logo.png" alt="logo">
+          </a>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <ul>
+          <li>
+            <a routerLink="/">About</a>
+          </li>
+          <li class="sep">|</li>
+          <li>
+            <a routerLink="/">News</a>
+          </li>
+          <li class="sep">|</li>
+          <li>
+            <a routerLink="/">Menu</a>
+          </li>
+          <li class="sep">|</li>
+          <li>
+            <a routerLink="/">Access</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
