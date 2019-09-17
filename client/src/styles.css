@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: sans-serif;
+}
+
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, input, textarea, p, th, td, img {
+  margin: 0;
+  padding: 0;
+}
+
+a:visited, a:link {
+  text-decoration: none;
+color: #646464;
+}
