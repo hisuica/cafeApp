@@ -27,7 +27,16 @@ public class CafeAppApplication {
                     .updateDate(LocalDateTime.now())
                     .build();
 
+            Notice notice2 = Notice.builder()
+                    .title("testTitle2")
+                    .context("testContext2")
+                    .type("Notice")
+                    .insertDate(LocalDateTime.now())
+                    .updateDate(LocalDateTime.now())
+                    .build();
+
             repository.save(notice);
+            repository.save(notice2);
         };
     }
 
