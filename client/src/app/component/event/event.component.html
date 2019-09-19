@@ -1,0 +1,25 @@
+<div class="events-wrapper">
+  <h2>
+    Events
+    <span class="sub-description" style="margin-left: 10px">
+      お得なイベント
+    </span>
+  </h2>
+  <div *ngFor="let notice of notices"
+       class="events-content">
+    <h3 class="events-title">
+      {{notice.title}}
+      <span class="write-date" style="margin-left: auto;">
+              {{notice.insertDate | date:"yyyy-MM-dd"}}
+            </span>
+    </h3>
+    <div class="events-inner">
+      <div class="events-image">
+
+      </div>
+      <div class="events-context">
+        {{notice.context}}
+      </div>
+    </div>
+  </div>
+</div>
