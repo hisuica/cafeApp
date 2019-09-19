@@ -15,6 +15,18 @@ div.news-section .inner {
   justify-content: center;
 }
 
+div.access-section h2 {
+  width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+div.access-section section{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .pdt40 {
   padding-top: 40px;
 }
