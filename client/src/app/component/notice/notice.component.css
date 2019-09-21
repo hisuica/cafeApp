@@ -1,13 +1,7 @@
 div.news-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-div.news-wrapper {
   display: inline-flex;
+  flex-direction: column;
   border-bottom: 1px solid #dfdfdf;
-  margin-left: 20px;
-  margin-right: 20px;
   padding-bottom: 10px;
 }
 
@@ -39,7 +33,7 @@ div.news-inner {
 }
 
 div.news-content {
-  width: 500px;
+  width: 550px;
   margin-bottom: 30px;
 }
 
