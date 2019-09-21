@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IndexComponent } from './index/index.component';
+import { IndexComponent } from './component/index/index.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NoticeComponent } from './component/notice/notice.component';
+import { EventComponent } from './component/event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    NoticeComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

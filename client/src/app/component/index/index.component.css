@@ -1,0 +1,48 @@
+div.main-img-area {
+  width: 100%;
+  height: 450px;
+  background-color: mediumseagreen;
+}
+
+div.news-section {
+  width: 100%;
+}
+
+div.news-section .inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.access-section h2 {
+  width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+div.access-section section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+div.shop-info-container {
+  margin: 0 auto;
+}
+
+div.shop-info-container h3 {
+  margin-top: 20px;
+  background-color: #dfdfdf;
+  text-indent: 10px;
+  border-left: 5px solid deepskyblue;
+}
+
+.pdt40 {
+  padding-top: 40px;
+}
+
+.pdb40 {
+  padding-bottom: 40px;
+}
