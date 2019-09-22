@@ -1,0 +1,67 @@
+div.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+div.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+div.form-group label {
+  font-weight: bold;
+}
+
+div.form-group input {
+  padding: 5px;
+  margin: 5px;
+  font-size: 1em;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+
+div.form-group select {
+  height: 30px;
+  margin: 5px;
+  font-size: 1em;
+  background-color: white;
+  border: 1px solid #dfdfdf;
+}
+
+div.form-group textarea {
+  height: 150px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1em;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+
+div.btn-group {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+button {
+  width: 80px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#btn-save {
+  background-color: forestgreen;
+  color: white;
+}
+
+#btn-delete {
+  background-color: palevioletred;
+  color: white;
+}

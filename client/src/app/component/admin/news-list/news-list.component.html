@@ -1,0 +1,30 @@
+<div class="head">
+  <h1>お知らせ管理</h1>
+  <button [routerLink]="['/news-add']">
+    新規作成
+  </button>
+</div>
+<div id="news-list">
+  <div id="list-header">
+    <div>種別</div>
+    <div>タイトル</div>
+    <div>登録日</div>
+    <div>更新日</div>
+    <div>表示</div>
+  </div>
+  <div
+    class="news-item"
+    [routerLink]="['/news-edit', notice.id]"
+    *ngFor="let notice of notices"
+  >
+    <div class="item item-type type-{{notice.type | lowercase}}">
+      {{notice.type}}
+    </div>
+    <div class="item" style="justify-content: flex-start; text-indent: 20px">
+      {{notice.title}}
+    </div>
+    <div class="item">{{notice.insertDate | date:'yyyy/MM/dd'}}</div>
+    <div class="item">{{notice.updateDate | date:'yyyy/MM/dd'}}</div>
+    <div class="item">{{notice.delFlag}}</div>
+  </div>
+</div>

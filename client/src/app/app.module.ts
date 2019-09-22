@@ -7,18 +7,24 @@ import { IndexComponent } from './component/index/index.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NoticeComponent } from './component/notice/notice.component';
 import { EventComponent } from './component/event/event.component';
+import { NewsListComponent } from './component/admin/news-list/news-list.component';
+import { NewsEditComponent } from './component/admin/news-edit/news-edit.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     NoticeComponent,
-    EventComponent
+    EventComponent,
+    NewsListComponent,
+    NewsEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
