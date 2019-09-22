@@ -53,7 +53,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a routerLink="news">
               管理者画面
             </a>
           </li>
@@ -80,7 +80,7 @@
           </li>
           <li class="sep">|</li>
           <li>
-            <a routerLink="/">News</a>
+            <a routerLink="/">Notice</a>
           </li>
           <li class="sep">|</li>
           <li>
@@ -88,7 +88,7 @@
           </li>
           <li class="sep">|</li>
           <li style="cursor: pointer">
-            <a (click)="scroll('access')">Access</a>
+            <a routerLink="index" fragment="access">Access</a>
           </li>
         </ul>
       </div>
@@ -101,8 +101,8 @@
   </div>
 </div>
 
-<div id="index-body">
-  <app-index></app-index>
+<div id="src-body">
+  <router-outlet></router-outlet>
 </div>
 
 <footer>
