@@ -2,6 +2,7 @@ package com.hisuica.cafeapp.cafeApp.model;
 
 
 import lombok.*;
+import org.apache.tomcat.jni.Local;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class Notice {
+public class News {
     @Id
     @GeneratedValue
     private Long id;
@@ -27,9 +28,11 @@ public class Notice {
     @NonNull
     private String context;
 
-    private LocalDateTime insertDate;
+    @Builder.Default
+    private LocalDateTime insertDate = LocalDateTime.now();
 
-    private LocalDateTime updateDate;
+    @Builder.Default
+    private LocalDateTime updateDate = LocalDateTime.now();
 
     @Builder.Default
     private Integer delFlag = 0;
