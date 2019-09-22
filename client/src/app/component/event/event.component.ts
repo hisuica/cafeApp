@@ -13,7 +13,7 @@ export class EventComponent implements OnInit {
   constructor(private noticeService: NoticeService) { }
 
   ngOnInit() {
-    this.noticeService.getAll().subscribe( data => {
+    this.noticeService.getEvents().subscribe( data => {
       this.notices = data;
     });
   }
