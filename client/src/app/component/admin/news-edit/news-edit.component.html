@@ -34,6 +34,11 @@
            [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
       </div>
     </div>
+    <div *ngIf="!selectedFile && notice.imgName" class="img-preview-container">
+      <div class="img-preview"
+           [ngStyle]="{'background-image': 'url(//localhost:8080/files/'+ notice.imgName + ')'}">
+      </div>
+    </div>
     <div class="btn-group">
       <button id="btn-save" type="submit" [disabled]="!noticeForm.form.valid">
         保存

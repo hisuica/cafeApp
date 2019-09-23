@@ -57,7 +57,6 @@ export class NewsEditComponent implements OnInit, OnDestroy {
 
     reader.addEventListener('load', (event: any) => {
       this.selectedFile = new ImageSnippet(event.target.result, file);
-      console.log(file.type);
       this.selectedFile.fileName = 'file' + Date.now() + '.' + this.selectedFile.type;
       this.notice.imgName = this.selectedFile.fileName;
     });
@@ -66,11 +65,9 @@ export class NewsEditComponent implements OnInit, OnDestroy {
   }
 
   save(form: NgForm) {
-    console.log(form);
     this.noticeService.save(form).subscribe(result => {
       if (this.selectedFile !== undefined) {
         this.fileUloadService.pushFileToStorage(this.selectedFile).subscribe(res => {
-          console.log('File is completely uploaded!');
         }, error => {
           console.log(error);
         });
