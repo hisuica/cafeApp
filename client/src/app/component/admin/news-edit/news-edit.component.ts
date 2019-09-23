@@ -3,16 +3,19 @@ import {Subscription} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NoticeService} from '../../../shared/notice.service';
 import {NgForm} from '@angular/forms';
-import {error} from 'util';
+import {ImageSnippet} from '../../../model/image-snippet';
 
 @Component({
   selector: 'app-news-edit',
   templateUrl: './news-edit.component.html',
   styleUrls: ['./news-edit.component.css']
 })
+
 export class NewsEditComponent implements OnInit, OnDestroy {
   notice: any = {};
   types = ['Event', 'Notice'];
+  selectedFile: ImageSnippet;
+  imgUrl: string;
 
   sub: Subscription;
 
@@ -47,9 +50,23 @@ export class NewsEditComponent implements OnInit, OnDestroy {
     this.router.navigate(['/news']);
   }
 
+  processFile(imageInput: any): void {
+    const file: File = imageInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (event: any) => {
+      this.selectedFile = new ImageSnippet(event.target.result, file);
+    });
+
+    reader.readAsDataURL(file);
+  }
+
   save(form: NgForm) {
     this.noticeService.save(form).subscribe(result => {
+      console.log(result);
       this.gotoList();
+    }, error => {
+      console.log(error);
     });
   }
 

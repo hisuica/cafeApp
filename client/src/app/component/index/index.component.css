@@ -1,7 +1,8 @@
 div.main-img-area {
   width: 100%;
   height: 450px;
-  background-color: mediumseagreen;
+  background: center center no-repeat;
+  background-size: cover;
 }
 
 div.news-section {
