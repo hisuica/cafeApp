@@ -24,8 +24,13 @@ div.events-content h3.events-title {
 div.events-image {
   width: 150px;
   height: 100px;
-  background-color: mediumslateblue;
   flex-grow: 0;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+div.image-none {
+  background-color: mediumpurple;
 }
 
 div.events-inner {

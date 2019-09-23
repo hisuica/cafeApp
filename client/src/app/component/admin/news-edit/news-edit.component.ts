@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Subscription} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
-import {NoticeService} from '../../../shared/notice.service';
+import {NoticeService} from '../../../service/notice/notice.service';
 import {NgForm} from '@angular/forms';
 import {ImageSnippet} from '../../../model/image-snippet';
+import {FileUploadService} from '../../../service/upload/file-upload.service';
 
 @Component({
   selector: 'app-news-edit',
@@ -21,7 +22,8 @@ export class NewsEditComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private noticeService: NoticeService
+    private noticeService: NoticeService,
+    private fileUloadService: FileUploadService
   ) { }
 
   ngOnInit() {
@@ -55,13 +57,24 @@ export class NewsEditComponent implements OnInit, OnDestroy {
 
     reader.addEventListener('load', (event: any) => {
       this.selectedFile = new ImageSnippet(event.target.result, file);
+      console.log(file.type);
+      this.selectedFile.fileName = 'file' + Date.now() + '.' + this.selectedFile.type;
+      this.notice.imgName = this.selectedFile.fileName;
     });
 
     reader.readAsDataURL(file);
   }
 
   save(form: NgForm) {
+    console.log(form);
     this.noticeService.save(form).subscribe(result => {
+      if (this.selectedFile !== undefined) {
+        this.fileUloadService.pushFileToStorage(this.selectedFile).subscribe(res => {
+          console.log('File is completely uploaded!');
+        }, error => {
+          console.log(error);
+        });
+      }
       this.gotoList();
     }, error => {
       console.log(error);

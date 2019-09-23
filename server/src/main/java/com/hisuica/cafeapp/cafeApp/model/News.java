@@ -1,8 +1,6 @@
 package com.hisuica.cafeapp.cafeApp.model;
 
-
 import lombok.*;
-import org.apache.tomcat.jni.Local;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,6 +31,8 @@ public class News {
 
     @Builder.Default
     private LocalDateTime updateDate = LocalDateTime.now();
+
+    private String imgName;
 
     @Builder.Default
     private Integer delFlag = 0;

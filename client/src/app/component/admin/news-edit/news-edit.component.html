@@ -25,9 +25,10 @@
         <span>画像添付</span>
         <input (change)="processFile(imageInput)"
                type="file" accept="image/*"
-               id="imgName" name="imgName" #imageInput>
+               id="imgName" #imageInput>
       </label>
     </div>
+    <input type="hidden" name="imgName" [(ngModel)]="notice.imgName">
     <div *ngIf="selectedFile" class="img-preview-container">
       <div class="img-preview"
            [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">

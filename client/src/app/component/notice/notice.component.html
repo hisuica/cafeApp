@@ -14,9 +14,11 @@
             </span>
     </h3>
     <div class="news-inner">
-      <div class="news-image">
-
+      <div *ngIf="notice.imgName !== null"
+           class="news-image"
+           [ngStyle]="{'background-image':'url(http://localhost:8080/files/' + notice.imgName + ')'}">
       </div>
+      <div *ngIf="notice.imgName === null" class="news-image image-none"></div>
       <div class="news-context">
         {{notice.context}}
       </div>
