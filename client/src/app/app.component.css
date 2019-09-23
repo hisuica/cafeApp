@@ -44,6 +44,10 @@ ul.members-menu li {
   margin-left: 10px;
 }
 
+ul.members-menu li:last-child {
+  border-left: 1px solid #dfdfdf;
+}
+
 #header1 a{
   height: 45px;
   display: flex;

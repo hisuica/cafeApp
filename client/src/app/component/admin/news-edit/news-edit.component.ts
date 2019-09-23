@@ -15,7 +15,6 @@ export class NewsEditComponent implements OnInit, OnDestroy {
   notice: any = {};
   types = ['Event', 'Notice'];
   selectedFile: ImageSnippet;
-  imgUrl: string;
 
   sub: Subscription;
 
@@ -63,7 +62,6 @@ export class NewsEditComponent implements OnInit, OnDestroy {
 
   save(form: NgForm) {
     this.noticeService.save(form).subscribe(result => {
-      console.log(result);
       this.gotoList();
     }, error => {
       console.log(error);
