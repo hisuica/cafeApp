@@ -6,4 +6,5 @@ export class Notice {
   delFlag: number;
   insertDate: string;
   updateDate: string;
+  imgName: string;
 }

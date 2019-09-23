@@ -14,9 +14,11 @@
             </span>
     </h3>
     <div class="events-inner">
-      <div class="events-image">
-
+      <div *ngIf="notice.imgName !== null"
+           class="events-image"
+           [ngStyle]="{'background-image':'url(http://localhost:8080/files/' + notice.imgName + ')'}">
       </div>
+      <div *ngIf="notice.imgName === null" class="events-image image-none"></div>
       <div class="events-context">
         {{notice.context}}
       </div>

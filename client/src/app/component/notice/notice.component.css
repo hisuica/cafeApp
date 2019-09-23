@@ -24,8 +24,13 @@ div.news-content h3.news-title {
 div.news-image {
   width: 150px;
   height: 100px;
-  background-color: mediumslateblue;
   flex-grow: 0;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+div.image-none {
+  background-color: mediumslateblue;
 }
 
 div.news-inner {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Notice } from '../../model/notice';
-import {NoticeService} from '../../shared/notice.service';
+import {NoticeService} from '../../service/notice/notice.service';
 
 @Component({
   selector: 'app-notice',
