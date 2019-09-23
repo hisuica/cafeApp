@@ -37,6 +37,9 @@
       <button id="btn-save" type="submit" [disabled]="!noticeForm.form.valid">
         保存
       </button>
+      <button id="btn-cancel" routerLink="/news">
+        キャンセル
+      </button>
       <button id="btn-delete" (click)="remove(notice.href)"
               *ngIf="notice.href">
         削除
