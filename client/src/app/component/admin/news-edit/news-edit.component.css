@@ -96,6 +96,6 @@ button {
 .img-preview {
   background: center center no-repeat;
   background-size: contain;
-  height: 116px;
-  width: 116px;
+  height: 400px;
+  width: 100%;
 }
