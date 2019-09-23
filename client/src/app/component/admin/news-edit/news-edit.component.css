@@ -50,10 +50,25 @@ div.btn-group {
 button {
   width: 80px;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 1em;
   padding: 10px;
   cursor: pointer;
+}
+
+#btn-image {
+  background-color: mediumpurple;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#btn-image input {
+  display: none;
 }
 
 #btn-save {
@@ -64,4 +79,17 @@ button {
 #btn-delete {
   background-color: palevioletred;
   color: white;
+}
+
+.img-preview-container {
+  background-color: #f7f7f7;
+  position: relative;
+  margin: 5px;
+}
+
+.img-preview {
+  background: center center no-repeat;
+  background-size: contain;
+  height: 116px;
+  width: 116px;
 }

@@ -15,6 +15,14 @@ export class NoticeService {
     return this.http.get(this.NOTICE_API + '-list');
   }
 
+  getNotices(): Observable<any> {
+    return this.http.get(this.NOTICE_API + '/notices');
+  }
+
+  getEvents(): Observable<any> {
+    return this.http.get(this.NOTICE_API + '/events');
+  }
+
   get(id: string) {
     return this.http.get(this.NOTICE_API + '/' + id);
   }

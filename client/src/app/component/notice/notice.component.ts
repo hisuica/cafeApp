@@ -13,8 +13,7 @@ export class NoticeComponent implements OnInit {
   constructor(private noticeService: NoticeService) { }
 
   ngOnInit() {
-    this.noticeService.getAll().subscribe( data => {
-      console.log(data);
+    this.noticeService.getNotices().subscribe( data => {
       this.notices = data;
     });
   }
